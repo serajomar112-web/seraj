@@ -2,363 +2,146 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>م. سراج المدني | Seraj Al-Madani</title>
-<meta name="description" content="الموقع الشخصي للمهندس سراج المدني. محتوى تعليمي في الهندسة الإنشائية، تطبيقات عملية وبرامج منصة سراج.">
-<meta property="og:title" content="م. سراج المدني | Seraj Al-Madani">
-<meta property="og:description" content="الهندسة الإنشائية — شرح، تطبيق، وتطوير أدوات التصميم.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>م. سراج المدني | مشاريعي وبرامجي</title>
+<meta name="description" content="مشاريع وبرامج المهندس سراج المدني. اكتشف منصة سراج وروابط أدوات التصميم الإنشائي.">
+<meta property="og:title" content="م. سراج المدني | مشاريعي وبرامجي">
+<meta property="og:description" content="مشاريعي وأدواتي الهندسية في مكان واحد.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#10151c">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* الألوان الأساسية */
-:root{
-  --bg:#10151c;
-  --panel:#171e27;
-  --gold:#d6b77a;
-  --text:#f2f4f7;
-  --muted:#b3bdca;
-  --border:rgba(255,255,255,.11);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:"Cairo",Tahoma,sans-serif;line-height:1.9;
-}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.container{width:min(1120px,90%);margin:auto}
-header{
-  border-bottom:1px solid var(--border);
-  background:rgba(16,21,28,.96);
-}
-.nav{
-  display:flex;justify-content:space-between;
-  align-items:center;gap:20px;padding:18px 0;
-}
-.brand{font-size:19px;font-weight:800}
-.brand small{
-  display:block;color:var(--gold);
-  font-size:10px;letter-spacing:2px;line-height:1.4;
-}
-nav{display:flex;flex-wrap:wrap;gap:25px}
-nav a{font-size:13px;color:var(--muted)}
-nav a:hover{color:var(--gold)}
-.hero{
-  position:relative;overflow:hidden;
-  min-height:570px;display:grid;align-items:center;
-  border-bottom:1px solid var(--border);
-  background:radial-gradient(ellipse at 20% 40%,#24303c 0,transparent 60%);
-}
-.hero-grid{
-  position:relative;display:grid;
-  grid-template-columns:1.1fr 1fr;gap:45px;
-  align-items:center;padding:75px 0;
-}
-.eyebrow{
-  display:flex;align-items:center;gap:12px;
-  color:var(--gold);font-size:13px;font-weight:600;
-}
-.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
-h1{font-size:clamp(38px,5vw,64px);line-height:1.4;margin:18px 0 8px}
-.english{font-size:16px;color:var(--gold);letter-spacing:1px}
-.lead{font-size:17px;max-width:540px;color:var(--muted);margin:25px 0}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{
-  display:inline-flex;justify-content:center;align-items:center;
-  gap:9px;padding:12px 24px;border-radius:7px;
-  background:var(--gold);color:#10151c;
-  font-weight:700;font-size:14px;border:1px solid var(--gold);
-}
-.btn:hover{filter:brightness(1.08)}
-.btn.outline{background:transparent;color:var(--text);border-color:var(--border)}
-.btn:focus-visible,a:focus-visible{
-  outline:3px solid var(--gold);outline-offset:5px;
-}
-.art{position:relative}
-.art svg{display:block;width:100%;height:auto}
-.art-caption{
-  color:var(--muted);font-size:11px;text-align:center;
-  letter-spacing:3px;margin-top:15px;
-}
-section.content{padding:65px 0}
-section.content + section.content{border-top:1px solid var(--border)}
-.section-head{margin-bottom:27px}
-.section-head span{color:var(--gold);font-size:12px}
-h2{font-size:29px;margin:6px 0 10px;line-height:1.5}
-.section-head p{color:var(--muted);margin:0}
-.about{
-  display:grid;grid-template-columns:.65fr 1.35fr;gap:45px;
-}
-.about p{color:var(--muted);margin-top:0}
-.tags{display:flex;flex-wrap:wrap;gap:10px}
-.tag{
-  padding:6px 14px;border:1px solid var(--border);
-  border-radius:5px;font-size:12px;color:var(--gold);
-}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{
-  padding:27px;background:var(--panel);
-  border:1px solid var(--border);border-radius:10px;
-}
-.card .number{color:var(--gold);font-size:12px;letter-spacing:2px}
-.card h3{font-size:18px;margin:17px 0 10px}
-.card p{color:var(--muted);font-size:14px;margin:0}
-.platform{
-  display:grid;grid-template-columns:1.4fr 1fr;gap:35px;
-  padding:35px;border:1px solid rgba(214,183,122,.35);
-  border-radius:12px;
-  background:linear-gradient(120deg,#202934,#171e27);
-}
-.platform p{color:var(--muted);font-size:14px}
-.platform-list{padding:0;list-style:none;margin:0}
-.platform-list li{
-  padding:13px 0;border-bottom:1px solid var(--border);font-size:14px;
-}
-.platform-list li:last-child{border-bottom:0}
-.platform-list li::before{content:"↗";color:var(--gold);margin-left:12px}
-.note{font-size:12px!important;color:var(--muted)}
-.contact{
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:25px;
-}
-footer{border-top:1px solid var(--border);padding:24px 0}
-.footer-row{
-  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-  color:var(--muted);font-size:11px;
-}
-[hidden]{display:none!important}
-@media(max-width:760px){
-  .nav{align-items:flex-start;flex-direction:column;gap:15px}
-  nav{gap:18px}
-  .hero-grid{grid-template-columns:1fr;padding:45px 0;gap:25px}
-  .hero{min-height:auto}
-  .art{max-width:410px;width:100%;margin:auto}
-  .about,.platform{grid-template-columns:1fr;gap:20px}
-  .cards{grid-template-columns:1fr}
-  section.content{padding:45px 0}
-  .platform{padding:24px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
+:root{--bg:#10151c;--panel:#19212b;--gold:#d6b77a;--text:#f3f5f8;--muted:#acb8c7;--border:#ffffff18}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(1080px,90%);margin:auto}
+header{border-bottom:1px solid var(--border)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}.brand{font-weight:800}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:2px}.nav>a:last-child{color:var(--muted);font-size:13px}
+.hero{position:relative;overflow:hidden;padding:70px 0 65px;background:radial-gradient(ellipse at 15% 60%,#273443,transparent 60%);border-bottom:1px solid var(--border)}.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:45px 45px;pointer-events:none}.hero .container{position:relative}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:1px}h1{font-size:clamp(34px,6vw,56px);line-height:1.4;margin:14px 0 8px}.english{font-size:15px;color:var(--gold);letter-spacing:1px}.hero p{color:var(--muted);font-size:15px;margin:22px 0 0}
+.projects{padding:45px 0 70px;min-height:330px}.heading{display:flex;align-items:center;gap:16px;margin-bottom:22px}.heading h2{font-size:23px;margin:0}.heading::after{content:"";height:1px;flex:1;background:var(--border)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{border:1px solid var(--border);border-radius:14px;background:linear-gradient(140deg,#202a36,var(--panel));padding:28px;display:flex;flex-direction:column}.card-top{display:flex;align-items:center;gap:15px}.icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid #d6b77a44;background:#d6b77a0b;border-radius:12px;color:var(--gold)}.icon svg{width:33px;height:33px}.tag{color:var(--gold);font-size:11px}.card h3{font-size:22px;margin:0}.card p{font-size:14px;color:var(--muted);margin:22px 0}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 21px;border-radius:7px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);font-size:13px;font-weight:700}.outline{background:transparent;border-color:#ffffff30;color:var(--text)}.btn:hover{filter:brightness(1.12)}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+footer{border-top:1px solid var(--border)}.footer-row{padding:25px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;font-size:12px;color:var(--muted)}.social{display:flex;gap:20px}.social a:hover{color:var(--gold)}
+dialog{background:var(--panel);color:var(--text);border:1px solid #d6b77a55;border-radius:15px;width:min(650px,92vw);max-height:85vh;padding:0;font:inherit}dialog::backdrop{background:#03080de0;backdrop-filter:blur(5px)}.dialog-header{padding:22px 25px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:15px}.dialog-header h2{margin:0;font-size:24px}.close{background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:7px;font-size:24px;line-height:1;width:38px;height:38px}.dialog-body{padding:22px 25px}.dialog-body>p{margin-top:0;color:var(--muted);font-size:14px}.detail{margin:22px 0}.detail h3{font-size:16px;color:var(--gold);margin:0 0 7px}.detail p,.detail li{font-size:14px;color:var(--muted)}.detail p{margin:0}.detail ul{padding-inline-start:22px;margin:0}.dialog-footer{padding-top:20px;border-top:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap}[hidden]{display:none!important}
+@media(max-width:650px){.hero{padding:45px 0}.cards{grid-template-columns:1fr}.card{padding:23px}.projects{padding:32px 0 45px}.nav{padding:16px 0}.dialog-body,.dialog-header{padding:19px}.footer-row{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
-
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#">
-      م. سراج المدني
-      <small dir="ltr">SERAJ AL-MADANI</small>
-    </a>
-    <nav aria-label="القائمة الرئيسية">
-      <a href="#about">عنّي</a>
-      <a href="#education">المحتوى التعليمي</a>
-      <a href="#platform">منصة سراج</a>
-      <a href="#contact">تواصل معي</a>
-    </nav>
-  </div>
-</header>
-
+<header><div class="container nav"><a class="brand" href="#">م. سراج المدني<small dir="ltr">SERAJ AL-MADANI</small></a><a href="#projects">مشاريعي وبرامجي ↙</a></div></header>
 <main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">هندسة مدنية · محتوى تعليمي · تطبيقات عملية</div>
-      <h1>م. سراج المدني</h1>
-      <div class="english" dir="ltr">Eng. Seraj Al-Madani</div>
-      <p class="lead">
-        أشارككم شروحات عملية، تطبيقات برمجية،
-        وتفاصيل تنفيذية لتبسيط المفاهيم الهندسية.
-      </p>
-      <div class="actions">
-        <a class="btn" href="#education">استكشف المحتوى <span>↙</span></a>
-        <a class="btn outline" href="#platform">برامج منصة سراج</a>
-      </div>
-    </div>
-
-    <!-- رسمة هندسية قابلة للتعديل، دون الحاجة إلى صورة خارجية -->
-    <div class="art">
-      <svg viewBox="0 0 500 420" fill="none" aria-hidden="true">
-        <defs>
-          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-            <path d="M25 0H0V25" stroke="#ffffff" stroke-opacity=".06"/>
-          </pattern>
-          <linearGradient id="gold" x1="80" y1="30" x2="400" y2="400"
-                          gradientUnits="userSpaceOnUse">
-            <stop stop-color="#ecd6a7"/>
-            <stop offset="1" stop-color="#9b783d"/>
-          </linearGradient>
-        </defs>
-        <rect width="500" height="420" fill="url(#grid)"/>
-        <ellipse cx="260" cy="365" rx="205" ry="35" fill="#070b10" opacity=".4"/>
-        <g stroke="url(#gold)" stroke-width="1.7" stroke-linejoin="round">
-          <path d="M125 310V100L270 40L405 112V320L260 380Z"/>
-          <path d="M125 100L260 170L405 112M260 170V380"/>
-          <path d="M125 152L260 222L405 164"/>
-          <path d="M125 204L260 274L405 216"/>
-          <path d="M125 256L260 326L405 268"/>
-          <path d="M173 125V335M217 148V358"/>
-          <path d="M307 151V360M357 132V340"/>
-          <path d="M125 100L260 222M125 152L260 170"/>
-          <path d="M260 222L405 112M260 170L405 164"/>
-          <path d="M125 204L260 326M125 256L260 274"/>
-          <path d="M260 326L405 216M260 274L405 268"/>
-        </g>
-        <g stroke="#91a4b7" stroke-opacity=".45" stroke-width="1">
-          <path d="M95 100V310M87 100H103M87 310H103"/>
-          <path d="M125 335L260 405M125 328V342M260 398V412"/>
-          <path d="M290 25L420 94"/>
-        </g>
-        <g fill="#d6b77a">
-          <circle cx="125" cy="100" r="4"/>
-          <circle cx="260" cy="170" r="4"/>
-          <circle cx="405" cy="112" r="4"/>
-        </g>
-      </svg>
-      <div class="art-caption" dir="ltr">STRUCTURAL ENGINEERING</div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="content">
-  <div class="container about">
-    <div class="section-head">
-      <span>عنّي</span>
-      <h2>الهندسة من الفكرة<br>إلى التطبيق.</h2>
-    </div>
-    <div>
-      <p>
-        مهندس مدني وصانع محتوى تعليمي في الهندسة الإنشائية.
-        أهتم بتقديم الشرح المرتبط بالتطبيق العملي،
-        وتطوير أدوات تساعد المهندس على التصميم ومراجعة النتائج.
-      </p>
-      <div class="tags">
-        <span class="tag">هندسة إنشائية</span>
-        <span class="tag">شروحات عملية</span>
-        <span class="tag">تطوير برامج</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="content">
-  <div class="container">
-    <div class="section-head">
-      <span>المحتوى التعليمي</span>
-      <h2>نفهم، نطبّق، وراجعوا النتائج.</h2>
-      <p>الموضوعات التي أشاركها عبر محتواي الهندسي.</p>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <div class="number">01 / ENGINEERING</div>
-        <h3>مفاهيم التصميم الإنشائي</h3>
-        <p>تفسير سلوك العناصر الإنشائية وفحوص التصميم بأمثلة عملية.</p>
-      </article>
-      <article class="card">
-        <div class="number">02 / SOFTWARE</div>
-        <h3>تطبيقات وبرامج هندسية</h3>
-        <p>شرح إدخال البيانات، قراءة النتائج وإعداد تقارير الحسابات.</p>
-      </article>
-      <article class="card">
-        <div class="number">03 / SITE</div>
-        <h3>تفاصيل ومواقف تنفيذية</h3>
-        <p>ربط التصميم بالتنفيذ وتبسيط المصطلحات المستخدمة في الموقع.</p>
-      </article>
-    </div>
-    <div class="actions">
-      <a id="facebook" class="btn outline" hidden>
-        تابع المحتوى على فيسبوك ↗
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="platform" class="content">
-  <div class="container">
-    <div class="platform">
-      <div>
-        <div class="section-head">
-          <span>تطبيقات أطورها</span>
-          <h2>منصة سراج</h2>
-        </div>
-        <p>
-          منصة تضم برامج للتصميم الإنشائي، مع نتائج الحسابات
-          والتسليح وتقارير قابلة للطباعة.
-        </p>
-        <div class="actions">
-          <a id="download" class="btn" hidden>تحميل المنصة ↓</a>
-          <a class="btn outline whatsapp">استفسر عن التفعيل ↗</a>
-        </div>
-        <p class="note">
-          تنزيل المنصة وتثبيتها مجاني. استخدام البرامج يتطلب التفعيل.
-        </p>
-      </div>
-      <ul class="platform-list">
-        <li>تصميم القواعد المنفصلة</li>
-        <li>تصميم القواعد المشتركة</li>
-        <li>تصميم الأعمدة القصيرة</li>
-        <li>تصميم قواعد الجار بشداد</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="content">
-  <div class="container contact">
-    <div class="section-head">
-      <span>تواصل معي</span>
-      <h2>عندك استفسار؟</h2>
-      <p>للاستفسار عن المحتوى الهندسي وبرامج منصة سراج.</p>
-    </div>
-    <a class="btn whatsapp">تواصل عبر واتساب ↗</a>
-  </div>
-</section>
+<section class="hero"><div class="container"><div class="eyebrow">مهندس مدني · مطوّر أدوات هندسية</div><h1>م. سراج المدني</h1><div class="english" dir="ltr">Eng. Seraj Al-Madani</div><p>مشاريعي وبرامجي في مكان واحد.</p></div></section>
+<section class="projects container" id="projects"><div class="heading"><h2>مشاريعي وبرامجي</h2></div><div class="cards" id="cards"></div></section>
 </main>
-
-<footer>
-  <div class="container footer-row">
-    <span>© <span id="year"></span> م. سراج المدني</span>
-    <span dir="ltr">Civil Engineer · Structural Engineering Educator</span>
-  </div>
-</footer>
-
+<footer><div class="container footer-row"><span>© <span id="year"></span> م. سراج المدني</span><div class="social"><a id="facebook" hidden>فيسبوك ↗</a><a id="whatsapp">واتساب ↗</a></div></div></footer>
+<dialog id="aboutDialog" aria-labelledby="dialogTitle">
+<div class="dialog-header"><h2 id="dialogTitle"></h2><button class="close" id="closeDialog" aria-label="إغلاق التفاصيل">×</button></div>
+<div class="dialog-body"><p id="dialogIntro"></p><div id="dialogDetails"></div><div class="dialog-footer"><a class="btn" id="dialogAction"></a><a class="btn outline" id="dialogContact">استفسر عبر واتساب ↗</a></div></div>
+</dialog>
 <script>
-/* ==================================================
-   عدّل الروابط هنا فقط:
-   ضع كل رابط بين علامتي الاقتباس.
-   الرابط الفارغ يجعل الزر مخفيًا حتى تضيف الرابط.
-   ================================================== */
-const links = {
-  facebook: "",
-  download: "",
-  whatsapp: "218925000529"
+/* ===== بيانات الموقع: عدّل اسمك ووسائل التواصل هنا ===== */
+const profile = {
+  whatsapp: "218925000529",
+  facebook: "" // ضع رابط صفحتك على فيسبوك هنا
 };
 
-function showLink(id, url) {
-  if (!url.startsWith("https://")) return;
-  const element = document.getElementById(id);
-  element.href = url;
-  element.hidden = false;
+/* ===== المشاريع: لكل مشروع بطاقة وتفاصيل مستقلة =====
+لإضافة مشروع جديد:
+انسخ أحد العناصر داخل المصفوفة، مع وضع فاصلة بين العنصرين.
+غيّر id إلى اسم فريد، ثم عدّل الاسم والوصف والرابط والتفاصيل.
+استخدم actionLabel: "فتح الموقع" إذا كان المشروع موقعًا.
+*/
+const projects = [
+  {
+    id: "seraj",
+    name: "منصة سراج",
+    category: "برامج التصميم الإنشائي",
+    summary: "برامج هندسية للحسابات والتسليح وإعداد التقارير.",
+    actionLabel: "تحميل المنصة ↓",
+    url: "https://github.com/serajomar112-web/seraj-product-downloads/releases/download/download/Seraj_R2.exe",
+    aboutLabel: "حول المنصة",
+    intro: "منصة تجمع برامج التصميم الإنشائي في واجهة واحدة، وتساعد المهندس على إدخال بيانات المشروع، مراجعة النتائج وإعداد التقارير.",
+    details: [
+      {title: "ماذا تحتوي؟", items: ["تصميم القواعد المنفصلة.", "تصميم القواعد المشتركة.", "تصميم الأعمدة القصيرة.", "تصميم قواعد الجار بشداد."]},
+      {title: "وظيفتها", text: "إجراء حسابات التصميم وعرض الفحوصات ونتائج التسليح، مع تقارير تتضمن النتائج ومراجع المعادلات المستخدمة."},
+      {title: "الفائدة للمهندس", text: "تنظيم خطوات التصميم وتسهيل مراجعة النتائج والتسليح وإعداد تقارير المشروع."},
+      {title: "التشغيل والتفعيل", text: "تعمل على Windows. تنزيل المنصة وتثبيتها مجاني، واستخدام البرامج يتطلب التفعيل. للاستفسار عن توافق النسخة مع جهازك أو البرامج المتاحة، تواصل عبر واتساب."}
+    ]
+  }
+];
+
+/* ===== الكود أدناه يبني البطاقات تلقائيًا ===== */
+const icon = '<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 30V12L20 5l13 7v18l-13 7L7 30Z M7 12l13 7 13-7 M20 19v18 M7 21l13 7 13-7 M13 15v18 M27 15v18" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+const dialog = document.getElementById("aboutDialog");
+function secureUrl(url) {
+  try { const parsed = new URL(url); return parsed.protocol === "https:" ? parsed.href : ""; }
+  catch { return ""; }
 }
-
-showLink("facebook", links.facebook);
-showLink("download", links.download);
-
-const message = encodeURIComponent(
-  "السلام عليكم م. سراج، أريد الاستفسار عن برامج منصة سراج."
-);
-
-document.querySelectorAll(".whatsapp").forEach(element => {
-  element.href = "https://wa.me/" + links.whatsapp + "?text=" + message;
+function contactUrl(name) {
+  return "https://wa.me/" + profile.whatsapp + "?text=" + encodeURIComponent("السلام عليكم م. سراج، أريد الاستفسار عن " + name + ".");
+}
+function make(tag, text, className) {
+  const element = document.createElement(tag);
+  if (text) element.textContent = text;
+  if (className) element.className = className;
+  return element;
+}
+projects.forEach(project => {
+  const card = make("article", "", "card");
+  const top = make("div", "", "card-top");
+  const mark = make("div", "", "icon");
+  mark.innerHTML = icon;
+  const title = make("div");
+  title.append(make("div", project.category, "tag"), make("h3", project.name));
+  top.append(mark, title);
+  const actions = make("div", "", "actions");
+  const url = secureUrl(project.url);
+  if (url) {
+    const link = make("a", project.actionLabel, "btn");
+    link.href = url; actions.append(link);
+  }
+  const about = make("button", project.aboutLabel || "حول البرنامج", "btn outline");
+  about.type = "button";
+  about.setAttribute("aria-haspopup", "dialog");
+  about.addEventListener("click", () => openAbout(project));
+  actions.append(about);
+  card.append(top, make("p", project.summary), actions);
+  document.getElementById("cards").append(card);
 });
-
+function openAbout(project) {
+  document.getElementById("dialogTitle").textContent = project.aboutLabel || "حول " + project.name;
+  document.getElementById("dialogIntro").textContent = project.intro;
+  const details = document.getElementById("dialogDetails");
+  details.replaceChildren();
+  project.details.forEach(detail => {
+    const section = make("section", "", "detail");
+    section.append(make("h3", detail.title));
+    if (detail.text) section.append(make("p", detail.text));
+    if (detail.items) {
+      const list = make("ul");
+      detail.items.forEach(item => list.append(make("li", item)));
+      section.append(list);
+    }
+    details.append(section);
+  });
+  const action = document.getElementById("dialogAction");
+  const url = secureUrl(project.url);
+  action.hidden = !url;
+  if (url) action.href = url; else action.removeAttribute("href");
+  action.textContent = project.actionLabel;
+  document.getElementById("dialogContact").href = contactUrl(project.name);
+  dialog.showModal();
+}
+document.getElementById("closeDialog").addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", event => {
+  if (event.target !== dialog) return;
+  const bounds = dialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+});
+document.getElementById("whatsapp").href = contactUrl("البرامج والمشاريع");
+const facebookUrl = secureUrl(profile.facebook);
+if (facebookUrl) {
+  document.getElementById("facebook").href = facebookUrl;
+  document.getElementById("facebook").hidden = false;
+}
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
