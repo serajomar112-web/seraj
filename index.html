@@ -3,50 +3,609 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>م. سراج المدني | مشاريعي وبرامجي</title>
-<meta name="description" content="مشاريع وبرامج المهندس سراج المدني. اكتشف منصة سراج وروابط أدوات التصميم الإنشائي.">
+<meta name="description" content="مشاريع وبرامج المهندس سراج المدني. اكتشف منصة سراج وأدوات التصميم الإنشائي.">
 <meta property="og:title" content="م. سراج المدني | مشاريعي وبرامجي">
 <meta property="og:description" content="مشاريعي وأدواتي الهندسية في مكان واحد.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#10151c">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#10151c;--panel:#19212b;--gold:#d6b77a;--text:#f3f5f8;--muted:#acb8c7;--border:#ffffff18}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Cairo,Tahoma,sans-serif;line-height:1.9}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(1080px,90%);margin:auto}
-header{border-bottom:1px solid var(--border)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}.brand{font-weight:800}.brand small{display:block;color:var(--gold);font-size:10px;letter-spacing:2px}.nav>a:last-child{color:var(--muted);font-size:13px}
-.hero{position:relative;overflow:hidden;padding:70px 0 65px;background:radial-gradient(ellipse at 15% 60%,#273443,transparent 60%);border-bottom:1px solid var(--border)}.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:45px 45px;pointer-events:none}.hero .container{position:relative}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:1px}h1{font-size:clamp(34px,6vw,56px);line-height:1.4;margin:14px 0 8px}.english{font-size:15px;color:var(--gold);letter-spacing:1px}.hero p{color:var(--muted);font-size:15px;margin:22px 0 0}
-.projects{padding:45px 0 70px;min-height:330px}.heading{display:flex;align-items:center;gap:16px;margin-bottom:22px}.heading h2{font-size:23px;margin:0}.heading::after{content:"";height:1px;flex:1;background:var(--border)}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{border:1px solid var(--border);border-radius:14px;background:linear-gradient(140deg,#202a36,var(--panel));padding:28px;display:flex;flex-direction:column}.card-top{display:flex;align-items:center;gap:15px}.icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid #d6b77a44;background:#d6b77a0b;border-radius:12px;color:var(--gold)}.icon svg{width:33px;height:33px}.tag{color:var(--gold);font-size:11px}.card h3{font-size:22px;margin:0}.card p{font-size:14px;color:var(--muted);margin:22px 0}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 21px;border-radius:7px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);font-size:13px;font-weight:700}.outline{background:transparent;border-color:#ffffff30;color:var(--text)}.btn:hover{filter:brightness(1.12)}a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
-footer{border-top:1px solid var(--border)}.footer-row{padding:25px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;font-size:12px;color:var(--muted)}.social{display:flex;gap:20px}.social a:hover{color:var(--gold)}
-dialog{background:var(--panel);color:var(--text);border:1px solid #d6b77a55;border-radius:15px;width:min(650px,92vw);max-height:85vh;padding:0;font:inherit}dialog::backdrop{background:#03080de0;backdrop-filter:blur(5px)}.dialog-header{padding:22px 25px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:15px}.dialog-header h2{margin:0;font-size:24px}.close{background:transparent;color:var(--muted);border:1px solid var(--border);border-radius:7px;font-size:24px;line-height:1;width:38px;height:38px}.dialog-body{padding:22px 25px}.dialog-body>p{margin-top:0;color:var(--muted);font-size:14px}.detail{margin:22px 0}.detail h3{font-size:16px;color:var(--gold);margin:0 0 7px}.detail p,.detail li{font-size:14px;color:var(--muted)}.detail p{margin:0}.detail ul{padding-inline-start:22px;margin:0}.dialog-footer{padding-top:20px;border-top:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap}[hidden]{display:none!important}
-@media(max-width:650px){.hero{padding:45px 0}.cards{grid-template-columns:1fr}.card{padding:23px}.projects{padding:32px 0 45px}.nav{padding:16px 0}.dialog-body,.dialog-header{padding:19px}.footer-row{align-items:flex-start;flex-direction:column}}
+:root {
+  --bg: #10151c;
+  --panel: #19212b;
+  --gold: #d6b77a;
+  --text: #f3f5f8;
+  --muted: #acb8c7;
+  --border: #ffffff18;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Cairo, Tahoma, sans-serif;
+  line-height: 1.9;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.container {
+  width: min(1080px, 90%);
+  margin: auto;
+}
+
+/* القائمة العلوية */
+header { border-bottom: 1px solid var(--border); }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.brand { font-weight: 800; }
+
+.brand small {
+  display: block;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.contact-nav {
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  border-radius: 6px;
+}
+
+/* الواجهة الرئيسية */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0 40px;
+  background: radial-gradient(
+    ellipse at 15% 60%, #273443, transparent 60%
+  );
+  border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff04 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff04 1px, transparent 1px);
+  background-size: 45px 45px;
+  pointer-events: none;
+}
+
+.hero .container { position: relative; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 45px;
+  min-height: 400px;
+}
+
+.hero-copy { padding: 25px 0; }
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1 {
+  font-size: clamp(36px, 4.7vw, 58px);
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 14px 0 8px;
+}
+
+.english {
+  font-size: 15px;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 22px 0 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.hero-art {
+  max-width: 450px;
+  width: 100%;
+  justify-self: end;
+}
+
+.hero-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-caption {
+  display: flex;
+  justify-content: space-between;
+  color: #9baaba;
+  font-size: 9px;
+  letter-spacing: 2px;
+  padding: 0 38px;
+}
+
+/* المشاريع */
+.projects {
+  padding: 38px 0 70px;
+  min-height: 280px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.heading h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.heading::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--border);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d6b77a27;
+  border-radius: 14px;
+  background: linear-gradient(140deg, #202a36, var(--panel));
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 35px #00000015;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 28px;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d6b77a44;
+  background: #d6b77a0b;
+  border-radius: 12px;
+  color: var(--gold);
+}
+
+.icon svg { width: 33px; height: 33px; }
+.tag { color: var(--gold); font-size: 11px; }
+.card h3 { font-size: 22px; margin: 0; }
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 18px 0 24px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.card .actions {
+  padding-top: 17px;
+  border-top: 1px solid var(--border);
+}
+
+/* الأزرار */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+  padding: 10px 21px;
+  border-radius: 7px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.outline {
+  background: transparent;
+  border-color: #ffffff30;
+  color: var(--text);
+}
+
+.btn:hover { filter: brightness(1.12); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* التواصل */
+footer { border-top: 1px solid var(--border); }
+
+.footer-row {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social a:hover { color: var(--gold); }
+.phone { color: var(--gold); letter-spacing: .6px; }
+
+/* نافذة التفاصيل */
+dialog {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid #d6b77a55;
+  border-radius: 15px;
+  width: min(650px, 92vw);
+  max-height: 85vh;
+  padding: 0;
+  font: inherit;
+}
+
+dialog::backdrop {
+  background: #03080de0;
+  backdrop-filter: blur(5px);
+}
+
+.dialog-header {
+  padding: 22px 25px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.dialog-header h2 { margin: 0; font-size: 24px; }
+
+.close {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 24px;
+  line-height: 1;
+  width: 38px;
+  height: 38px;
+}
+
+.dialog-body { padding: 22px 25px; }
+
+.dialog-body > p {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.detail { margin: 22px 0; }
+
+.detail h3 {
+  font-size: 16px;
+  color: var(--gold);
+  margin: 0 0 7px;
+}
+
+.detail p,
+.detail li {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.detail p { margin: 0; }
+
+.detail ul {
+  padding-inline-start: 22px;
+  margin: 0;
+}
+
+.dialog-footer {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+[hidden] { display: none !important; }
+
+/* الهاتف */
+@media (max-width: 760px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+  }
+
+  .hero { padding: 20px 0 30px; }
+  .hero-copy { padding: 20px 0 0; }
+
+  .hero-art {
+    justify-self: center;
+    max-width: 320px;
+    margin-top: 15px;
+  }
+
+  h1 { font-size: 38px; }
+  .nav-links { gap: 14px; }
+  .nav-links > a:first-child { display: none; }
+
+  .hero-actions .btn {
+    font-size: 12px;
+    padding: 9px 16px;
+  }
+
+  .projects { padding-top: 28px; }
+  .art-caption { font-size: 8px; }
+}
+
+@media (max-width: 650px) {
+  .cards { grid-template-columns: 1fr; }
+  .card { padding: 23px; }
+  .projects { padding-bottom: 45px; }
+  .nav { padding: 16px 0; }
+
+  .dialog-body,
+  .dialog-header { padding: 19px; }
+
+  .footer-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="container nav"><a class="brand" href="#">م. سراج المدني<small dir="ltr">SERAJ AL-MADANI</small></a><a href="#projects">مشاريعي وبرامجي ↙</a></div></header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      م. سراج المدني
+      <small dir="ltr">SERAJ AL-MADANI</small>
+    </a>
+
+    <div class="nav-links">
+      <a href="#projects">المشاريع والبرامج</a>
+      <a class="contact-nav" href="tel:+218925000529">
+        اتصل بي ↗
+      </a>
+    </div>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="container"><div class="eyebrow">مهندس مدني · مطوّر أدوات هندسية</div><h1>م. سراج المدني</h1><div class="english" dir="ltr">Eng. Seraj Al-Madani</div><p>مشاريعي وبرامجي في مكان واحد.</p></div></section>
-<section class="projects container" id="projects"><div class="heading"><h2>مشاريعي وبرامجي</h2></div><div class="cards" id="cards"></div></section>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          مهندس مدني · مطوّر أدوات هندسية
+        </div>
+
+        <h1>م. سراج المدني</h1>
+
+        <div class="english" dir="ltr">
+          Eng. Seraj Al-Madani
+        </div>
+
+        <p>مشاريعي وبرامجي في مكان واحد.</p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">
+            استكشف المشاريع ↙
+          </a>
+          <a class="btn outline" id="heroWhatsapp">
+            تواصل معي ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- الرسمة الهندسية -->
+      <div class="hero-art">
+        <svg viewBox="0 0 500 420" fill="none" aria-hidden="true">
+          <defs>
+            <pattern id="engineeringGrid"
+                     width="25" height="25"
+                     patternUnits="userSpaceOnUse">
+              <path d="M25 0H0V25"
+                    stroke="white" stroke-opacity=".04"/>
+            </pattern>
+
+            <linearGradient id="engineeringGold"
+                            x1="80" y1="30"
+                            x2="400" y2="400"
+                            gradientUnits="userSpaceOnUse">
+              <stop stop-color="#ecd6a7"/>
+              <stop offset="1" stop-color="#9b783d"/>
+            </linearGradient>
+          </defs>
+
+          <rect width="500" height="420"
+                fill="url(#engineeringGrid)"/>
+
+          <ellipse cx="260" cy="365" rx="205" ry="35"
+                   fill="#070b10" opacity=".4"/>
+
+          <g stroke="url(#engineeringGold)"
+             stroke-width="1.7" stroke-linejoin="round">
+            <path d="M125 310V100L270 40L405 112V320L260 380Z"/>
+            <path d="M125 100L260 170L405 112M260 170V380"/>
+            <path d="M125 152L260 222L405 164
+                     M125 204L260 274L405 216
+                     M125 256L260 326L405 268"/>
+            <path d="M173 125V335M217 148V358
+                     M307 151V360M357 132V340"/>
+            <path d="M125 100L260 222M125 152L260 170
+                     M260 222L405 112M260 170L405 164
+                     M125 204L260 326M125 256L260 274
+                     M260 326L405 216M260 274L405 268"/>
+          </g>
+
+          <g stroke="#91a4b7" stroke-opacity=".45">
+            <path d="M95 100V310M87 100H103M87 310H103
+                     M125 335L260 405M125 328V342
+                     M260 398V412M290 25L420 94"/>
+          </g>
+
+          <g fill="#d6b77a">
+            <circle cx="125" cy="100" r="4"/>
+            <circle cx="260" cy="170" r="4"/>
+            <circle cx="405" cy="112" r="4"/>
+          </g>
+        </svg>
+
+        <div class="art-caption" dir="ltr">
+          <span>STRUCTURAL ENGINEERING</span>
+          <span>S / M</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects container" id="projects">
+    <div class="heading">
+      <h2>مشاريعي وبرامجي</h2>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
 </main>
-<footer><div class="container footer-row"><span>© <span id="year"></span> م. سراج المدني</span><div class="social"><a id="facebook" hidden>فيسبوك ↗</a><a id="whatsapp">واتساب ↗</a></div></div></footer>
+
+<footer>
+  <div class="container footer-row">
+    <span>
+      © <span id="year"></span> م. سراج المدني
+    </span>
+
+    <div class="social">
+      <a id="facebook" hidden>فيسبوك ↗</a>
+      <a id="whatsapp">واتساب ↗</a>
+      <a class="phone" dir="ltr" href="tel:+218925000529">
+        +218 92 500 0529
+      </a>
+    </div>
+  </div>
+</footer>
+
 <dialog id="aboutDialog" aria-labelledby="dialogTitle">
-<div class="dialog-header"><h2 id="dialogTitle"></h2><button class="close" id="closeDialog" aria-label="إغلاق التفاصيل">×</button></div>
-<div class="dialog-body"><p id="dialogIntro"></p><div id="dialogDetails"></div><div class="dialog-footer"><a class="btn" id="dialogAction"></a><a class="btn outline" id="dialogContact">استفسر عبر واتساب ↗</a></div></div>
+  <div class="dialog-header">
+    <h2 id="dialogTitle"></h2>
+    <button class="close" id="closeDialog"
+            aria-label="إغلاق التفاصيل">×</button>
+  </div>
+
+  <div class="dialog-body">
+    <p id="dialogIntro"></p>
+    <div id="dialogDetails"></div>
+
+    <div class="dialog-footer">
+      <a class="btn" id="dialogAction"></a>
+      <a class="btn outline" id="dialogContact">
+        استفسر عبر واتساب ↗
+      </a>
+    </div>
+  </div>
 </dialog>
+
 <script>
-/* ===== بيانات الموقع: عدّل اسمك ووسائل التواصل هنا ===== */
+/* ===== وسائل التواصل ===== */
 const profile = {
   whatsapp: "218925000529",
   facebook: "" // ضع رابط صفحتك على فيسبوك هنا
 };
 
-/* ===== المشاريع: لكل مشروع بطاقة وتفاصيل مستقلة =====
+/*
+===== المشاريع =====
 لإضافة مشروع جديد:
-انسخ أحد العناصر داخل المصفوفة، مع وضع فاصلة بين العنصرين.
-غيّر id إلى اسم فريد، ثم عدّل الاسم والوصف والرابط والتفاصيل.
-استخدم actionLabel: "فتح الموقع" إذا كان المشروع موقعًا.
+انسخ عنصرًا داخل المصفوفة، وضع فاصلة بين العنصرين.
+عدّل الاسم والوصف والرابط والتفاصيل.
 */
 const projects = [
   {
@@ -54,95 +613,213 @@ const projects = [
     name: "منصة سراج",
     category: "برامج التصميم الإنشائي",
     summary: "برامج هندسية للحسابات والتسليح وإعداد التقارير.",
+
     actionLabel: "تحميل المنصة ↓",
     url: "https://github.com/serajomar112-web/seraj-product-downloads/releases/download/download/Seraj_R2.exe",
+
     aboutLabel: "حول المنصة",
-    intro: "منصة تجمع برامج التصميم الإنشائي في واجهة واحدة، وتساعد المهندس على إدخال بيانات المشروع، مراجعة النتائج وإعداد التقارير.",
+
+    intro: "منصة سراج منصة للتصميم الإنشائي تعتمد على واجهة Excel منظّمة لإدخال بيانات المشروع وعرض نتائج الحسابات وفحوص التصميم والتسليح. تجمع برامج هندسية متخصصة، وتتيح مراجعة النتائج وإعداد تقارير واضحة قابلة للطباعة، تتضمن النتائج ومراجع المعادلات المستخدمة.",
+
     details: [
-      {title: "ماذا تحتوي؟", items: ["تصميم القواعد المنفصلة.", "تصميم القواعد المشتركة.", "تصميم الأعمدة القصيرة.", "تصميم قواعد الجار بشداد."]},
-      {title: "وظيفتها", text: "إجراء حسابات التصميم وعرض الفحوصات ونتائج التسليح، مع تقارير تتضمن النتائج ومراجع المعادلات المستخدمة."},
-      {title: "الفائدة للمهندس", text: "تنظيم خطوات التصميم وتسهيل مراجعة النتائج والتسليح وإعداد تقارير المشروع."},
-      {title: "التشغيل والتفعيل", text: "تعمل على Windows. تنزيل المنصة وتثبيتها مجاني، واستخدام البرامج يتطلب التفعيل. للاستفسار عن توافق النسخة مع جهازك أو البرامج المتاحة، تواصل عبر واتساب."}
+      {
+        title: "ماذا تحتوي؟",
+        items: [
+          "تصميم القواعد المنفصلة.",
+          "تصميم القواعد المشتركة.",
+          "تصميم قواعد الجار بشداد.",
+          "تصميم الأعمدة القصيرة.",
+          "تصميم الأعمدة الطويلة (Slender Columns)."
+        ]
+      },
+      {
+        title: "وظيفتها",
+        text: "تنظيم إدخال بيانات المشروع وعرض نتائج الحسابات وفحوص التصميم والتسليح من خلال واجهة Excel، مع إعداد تقارير تتضمن النتائج ومراجع المعادلات المستخدمة."
+      },
+      {
+        title: "الفائدة للمهندس",
+        text: "تسهيل خطوات التصميم ومراجعة النتائج والتسليح، وجمع أدوات هندسية متخصصة في منصة واحدة."
+      },
+      {
+        title: "التشغيل والتفعيل",
+        text: "تعمل على Windows. تنزيل المنصة وتثبيتها مجاني، واستخدام البرامج يتطلب التفعيل. للاستفسار عن توافق النسخة مع جهازك أو البرامج المتاحة، تواصل عبر واتساب."
+      }
     ]
   }
 ];
 
-/* ===== الكود أدناه يبني البطاقات تلقائيًا ===== */
-const icon = '<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 30V12L20 5l13 7v18l-13 7L7 30Z M7 12l13 7 13-7 M20 19v18 M7 21l13 7 13-7 M13 15v18 M27 15v18" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+/* ===== إنشاء البطاقات ===== */
+const icon = `
+  <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+    <path
+      d="M7 30V12L20 5l13 7v18l-13 7L7 30Z
+         M7 12l13 7 13-7
+         M20 19v18
+         M7 21l13 7 13-7
+         M13 15v18
+         M27 15v18"
+      stroke="currentColor"
+      stroke-width="1.4"
+      stroke-linejoin="round"/>
+  </svg>
+`;
+
 const dialog = document.getElementById("aboutDialog");
+
 function secureUrl(url) {
-  try { const parsed = new URL(url); return parsed.protocol === "https:" ? parsed.href : ""; }
-  catch { return ""; }
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" ? parsed.href : "";
+  } catch {
+    return "";
+  }
 }
+
 function contactUrl(name) {
-  return "https://wa.me/" + profile.whatsapp + "?text=" + encodeURIComponent("السلام عليكم م. سراج، أريد الاستفسار عن " + name + ".");
+  const message =
+    "السلام عليكم م. سراج، أريد الاستفسار عن " + name + ".";
+
+  return "https://wa.me/" + profile.whatsapp +
+         "?text=" + encodeURIComponent(message);
 }
+
 function make(tag, text, className) {
   const element = document.createElement(tag);
+
   if (text) element.textContent = text;
   if (className) element.className = className;
+
   return element;
 }
+
 projects.forEach(project => {
   const card = make("article", "", "card");
   const top = make("div", "", "card-top");
   const mark = make("div", "", "icon");
+
   mark.innerHTML = icon;
+
   const title = make("div");
-  title.append(make("div", project.category, "tag"), make("h3", project.name));
+  title.append(
+    make("div", project.category, "tag"),
+    make("h3", project.name)
+  );
+
   top.append(mark, title);
+
   const actions = make("div", "", "actions");
   const url = secureUrl(project.url);
+
   if (url) {
     const link = make("a", project.actionLabel, "btn");
-    link.href = url; actions.append(link);
+    link.href = url;
+    actions.append(link);
   }
-  const about = make("button", project.aboutLabel || "حول البرنامج", "btn outline");
+
+  const about = make(
+    "button",
+    project.aboutLabel || "حول البرنامج",
+    "btn outline"
+  );
+
   about.type = "button";
   about.setAttribute("aria-haspopup", "dialog");
   about.addEventListener("click", () => openAbout(project));
+
   actions.append(about);
   card.append(top, make("p", project.summary), actions);
+
   document.getElementById("cards").append(card);
 });
+
+/* ===== فتح التفاصيل ===== */
 function openAbout(project) {
-  document.getElementById("dialogTitle").textContent = project.aboutLabel || "حول " + project.name;
-  document.getElementById("dialogIntro").textContent = project.intro;
+  document.getElementById("dialogTitle").textContent =
+    project.aboutLabel || "حول " + project.name;
+
+  document.getElementById("dialogIntro").textContent =
+    project.intro;
+
   const details = document.getElementById("dialogDetails");
   details.replaceChildren();
+
   project.details.forEach(detail => {
     const section = make("section", "", "detail");
     section.append(make("h3", detail.title));
-    if (detail.text) section.append(make("p", detail.text));
+
+    if (detail.text) {
+      section.append(make("p", detail.text));
+    }
+
     if (detail.items) {
       const list = make("ul");
-      detail.items.forEach(item => list.append(make("li", item)));
+
+      detail.items.forEach(item => {
+        list.append(make("li", item));
+      });
+
       section.append(list);
     }
+
     details.append(section);
   });
+
   const action = document.getElementById("dialogAction");
   const url = secureUrl(project.url);
+
   action.hidden = !url;
-  if (url) action.href = url; else action.removeAttribute("href");
+
+  if (url) {
+    action.href = url;
+  } else {
+    action.removeAttribute("href");
+  }
+
   action.textContent = project.actionLabel;
-  document.getElementById("dialogContact").href = contactUrl(project.name);
+
+  document.getElementById("dialogContact").href =
+    contactUrl(project.name);
+
   dialog.showModal();
 }
-document.getElementById("closeDialog").addEventListener("click", () => dialog.close());
+
+/* ===== إغلاق التفاصيل ===== */
+document.getElementById("closeDialog").addEventListener(
+  "click",
+  () => dialog.close()
+);
+
 dialog.addEventListener("click", event => {
   if (event.target !== dialog) return;
+
   const bounds = dialog.getBoundingClientRect();
-  if (event.clientX < bounds.left || event.clientX > bounds.right ||
-      event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+
+  if (
+    event.clientX < bounds.left ||
+    event.clientX > bounds.right ||
+    event.clientY < bounds.top ||
+    event.clientY > bounds.bottom
+  ) {
+    dialog.close();
+  }
 });
-document.getElementById("whatsapp").href = contactUrl("البرامج والمشاريع");
+
+/* ===== تفعيل روابط التواصل ===== */
+document.getElementById("whatsapp").href =
+  contactUrl("البرامج والمشاريع");
+
+document.getElementById("heroWhatsapp").href =
+  contactUrl("البرامج والمشاريع");
+
 const facebookUrl = secureUrl(profile.facebook);
+
 if (facebookUrl) {
   document.getElementById("facebook").href = facebookUrl;
   document.getElementById("facebook").hidden = false;
 }
-document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 </body>
 </html>
