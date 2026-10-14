@@ -1,154 +1,365 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>منصة سراج | برامج التصميم الإنشائي</title>
-  <meta name="description"
-        content="تعرّف على منصة سراج للتصميم الإنشائي، وحمّل المنصة وتواصل للحصول على التفعيل.">
-  <meta property="og:title" content="منصة سراج للتصميم الإنشائي">
-  <meta property="og:description"
-        content="برامج التصميم الإنشائي، الحسابات، التسليح والتقارير.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#112d3a">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>م. سراج المدني | Seraj Al-Madani</title>
+<meta name="description" content="الموقع الشخصي للمهندس سراج المدني. محتوى تعليمي في الهندسة الإنشائية، تطبيقات عملية وبرامج منصة سراج.">
+<meta property="og:title" content="م. سراج المدني | Seraj Al-Madani">
+<meta property="og:description" content="الهندسة الإنشائية — شرح، تطبيق، وتطوير أدوات التصميم.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#10151c">
 
-  <style>
-    /* يمكنك تعديل الألوان هنا */
-    :root {
-      --background: #f4f7f9;
-      --primary: #112d3a;
-      --accent: #b78232;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--primary);
-      font-family: Tahoma, Arial, sans-serif;
-      line-height: 1.9;
-    }
-    header {
-      padding: 20px;
-      border-bottom: 1px solid #dce4e8;
-      font-weight: bold;
-    }
-    main { max-width: 950px; margin: auto; padding: 35px 20px; }
-    .hero {
-      padding: 45px 25px;
-      border-radius: 22px;
-      background: var(--primary);
-      color: white;
-    }
-    .label { color: #e7bd79; }
-    h1 { font-size: clamp(30px, 6vw, 48px); margin: 10px 0; }
-    .hero p { max-width: 650px; color: #dbe5eb; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 10px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .secondary { background: white; color: var(--primary); }
-    .button:focus-visible { outline: 3px solid #75c9ff; outline-offset: 4px; }
-    .button[aria-disabled="true"] { opacity: .6; cursor: default; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-    article {
-      background: white;
-      padding: 22px;
-      border: 1px solid #dce4e8;
-      border-radius: 15px;
-    }
-    article h3 { margin-top: 0; }
-    footer { padding: 25px; text-align: center; color: #526775; }
-  </style>
+<style>
+/* الألوان الأساسية */
+:root{
+  --bg:#10151c;
+  --panel:#171e27;
+  --gold:#d6b77a;
+  --text:#f2f4f7;
+  --muted:#b3bdca;
+  --border:rgba(255,255,255,.11);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Cairo",Tahoma,sans-serif;line-height:1.9;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1120px,90%);margin:auto}
+header{
+  border-bottom:1px solid var(--border);
+  background:rgba(16,21,28,.96);
+}
+.nav{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:20px;padding:18px 0;
+}
+.brand{font-size:19px;font-weight:800}
+.brand small{
+  display:block;color:var(--gold);
+  font-size:10px;letter-spacing:2px;line-height:1.4;
+}
+nav{display:flex;flex-wrap:wrap;gap:25px}
+nav a{font-size:13px;color:var(--muted)}
+nav a:hover{color:var(--gold)}
+.hero{
+  position:relative;overflow:hidden;
+  min-height:570px;display:grid;align-items:center;
+  border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse at 20% 40%,#24303c 0,transparent 60%);
+}
+.hero-grid{
+  position:relative;display:grid;
+  grid-template-columns:1.1fr 1fr;gap:45px;
+  align-items:center;padding:75px 0;
+}
+.eyebrow{
+  display:flex;align-items:center;gap:12px;
+  color:var(--gold);font-size:13px;font-weight:600;
+}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.4;margin:18px 0 8px}
+.english{font-size:16px;color:var(--gold);letter-spacing:1px}
+.lead{font-size:17px;max-width:540px;color:var(--muted);margin:25px 0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  display:inline-flex;justify-content:center;align-items:center;
+  gap:9px;padding:12px 24px;border-radius:7px;
+  background:var(--gold);color:#10151c;
+  font-weight:700;font-size:14px;border:1px solid var(--gold);
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.outline{background:transparent;color:var(--text);border-color:var(--border)}
+.btn:focus-visible,a:focus-visible{
+  outline:3px solid var(--gold);outline-offset:5px;
+}
+.art{position:relative}
+.art svg{display:block;width:100%;height:auto}
+.art-caption{
+  color:var(--muted);font-size:11px;text-align:center;
+  letter-spacing:3px;margin-top:15px;
+}
+section.content{padding:65px 0}
+section.content + section.content{border-top:1px solid var(--border)}
+.section-head{margin-bottom:27px}
+.section-head span{color:var(--gold);font-size:12px}
+h2{font-size:29px;margin:6px 0 10px;line-height:1.5}
+.section-head p{color:var(--muted);margin:0}
+.about{
+  display:grid;grid-template-columns:.65fr 1.35fr;gap:45px;
+}
+.about p{color:var(--muted);margin-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{
+  padding:6px 14px;border:1px solid var(--border);
+  border-radius:5px;font-size:12px;color:var(--gold);
+}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  padding:27px;background:var(--panel);
+  border:1px solid var(--border);border-radius:10px;
+}
+.card .number{color:var(--gold);font-size:12px;letter-spacing:2px}
+.card h3{font-size:18px;margin:17px 0 10px}
+.card p{color:var(--muted);font-size:14px;margin:0}
+.platform{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:35px;
+  padding:35px;border:1px solid rgba(214,183,122,.35);
+  border-radius:12px;
+  background:linear-gradient(120deg,#202934,#171e27);
+}
+.platform p{color:var(--muted);font-size:14px}
+.platform-list{padding:0;list-style:none;margin:0}
+.platform-list li{
+  padding:13px 0;border-bottom:1px solid var(--border);font-size:14px;
+}
+.platform-list li:last-child{border-bottom:0}
+.platform-list li::before{content:"↗";color:var(--gold);margin-left:12px}
+.note{font-size:12px!important;color:var(--muted)}
+.contact{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:25px;
+}
+footer{border-top:1px solid var(--border);padding:24px 0}
+.footer-row{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  color:var(--muted);font-size:11px;
+}
+[hidden]{display:none!important}
+@media(max-width:760px){
+  .nav{align-items:flex-start;flex-direction:column;gap:15px}
+  nav{gap:18px}
+  .hero-grid{grid-template-columns:1fr;padding:45px 0;gap:25px}
+  .hero{min-height:auto}
+  .art{max-width:410px;width:100%;margin:auto}
+  .about,.platform{grid-template-columns:1fr;gap:20px}
+  .cards{grid-template-columns:1fr}
+  section.content{padding:45px 0}
+  .platform{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
 </head>
 
 <body>
-  <header>منصة سراج — SERAJ</header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      م. سراج المدني
+      <small dir="ltr">SERAJ AL-MADANI</small>
+    </a>
+    <nav aria-label="القائمة الرئيسية">
+      <a href="#about">عنّي</a>
+      <a href="#education">المحتوى التعليمي</a>
+      <a href="#platform">منصة سراج</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <span class="label">برامج التصميم الإنشائي</span>
-      <h1>منصة سراج</h1>
-      <p>
-        أدوات تساعدك في التصميم الإنشائي ومراجعة النتائج
-        وإعداد تقارير الحسابات والتسليح.
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">هندسة مدنية · محتوى تعليمي · تطبيقات عملية</div>
+      <h1>م. سراج المدني</h1>
+      <div class="english" dir="ltr">Eng. Seraj Al-Madani</div>
+      <p class="lead">
+        أشارككم شروحات عملية، تطبيقات برمجية،
+        وتفاصيل تنفيذية لتبسيط المفاهيم الهندسية.
       </p>
-
       <div class="actions">
-        <a id="download" class="button" aria-disabled="true">
-          رابط التحميل قيد الإعداد
-        </a>
-        <a id="contact" class="button secondary">
-          تواصل للتفعيل
-        </a>
+        <a class="btn" href="#education">استكشف المحتوى <span>↙</span></a>
+        <a class="btn outline" href="#platform">برامج منصة سراج</a>
       </div>
+    </div>
 
-      <p>تنزيل المنصة وتثبيتها مجاني، واستخدام البرامج يتطلب التفعيل.</p>
-    </section>
+    <!-- رسمة هندسية قابلة للتعديل، دون الحاجة إلى صورة خارجية -->
+    <div class="art">
+      <svg viewBox="0 0 500 420" fill="none" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+            <path d="M25 0H0V25" stroke="#ffffff" stroke-opacity=".06"/>
+          </pattern>
+          <linearGradient id="gold" x1="80" y1="30" x2="400" y2="400"
+                          gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ecd6a7"/>
+            <stop offset="1" stop-color="#9b783d"/>
+          </linearGradient>
+        </defs>
+        <rect width="500" height="420" fill="url(#grid)"/>
+        <ellipse cx="260" cy="365" rx="205" ry="35" fill="#070b10" opacity=".4"/>
+        <g stroke="url(#gold)" stroke-width="1.7" stroke-linejoin="round">
+          <path d="M125 310V100L270 40L405 112V320L260 380Z"/>
+          <path d="M125 100L260 170L405 112M260 170V380"/>
+          <path d="M125 152L260 222L405 164"/>
+          <path d="M125 204L260 274L405 216"/>
+          <path d="M125 256L260 326L405 268"/>
+          <path d="M173 125V335M217 148V358"/>
+          <path d="M307 151V360M357 132V340"/>
+          <path d="M125 100L260 222M125 152L260 170"/>
+          <path d="M260 222L405 112M260 170L405 164"/>
+          <path d="M125 204L260 326M125 256L260 274"/>
+          <path d="M260 326L405 216M260 274L405 268"/>
+        </g>
+        <g stroke="#91a4b7" stroke-opacity=".45" stroke-width="1">
+          <path d="M95 100V310M87 100H103M87 310H103"/>
+          <path d="M125 335L260 405M125 328V342M260 398V412"/>
+          <path d="M290 25L420 94"/>
+        </g>
+        <g fill="#d6b77a">
+          <circle cx="125" cy="100" r="4"/>
+          <circle cx="260" cy="170" r="4"/>
+          <circle cx="405" cy="112" r="4"/>
+        </g>
+      </svg>
+      <div class="art-caption" dir="ltr">STRUCTURAL ENGINEERING</div>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2>من برامج منصة سراج</h2>
-      <div class="cards">
-        <article>
-          <h3>القواعد المنفصلة</h3>
-          <p>حسابات التصميم والتسليح وفحوصات القاعدة.</p>
-        </article>
-        <article>
-          <h3>القواعد المشتركة</h3>
-          <p>حسابات القواعد المشتركة ونتائج التسليح والتقارير.</p>
-        </article>
-        <article>
-          <h3>الأعمدة القصيرة</h3>
-          <p>تصميم الأعمدة القصيرة ومراجعة نتائجها.</p>
-        </article>
+<section id="about" class="content">
+  <div class="container about">
+    <div class="section-head">
+      <span>عنّي</span>
+      <h2>الهندسة من الفكرة<br>إلى التطبيق.</h2>
+    </div>
+    <div>
+      <p>
+        مهندس مدني وصانع محتوى تعليمي في الهندسة الإنشائية.
+        أهتم بتقديم الشرح المرتبط بالتطبيق العملي،
+        وتطوير أدوات تساعد المهندس على التصميم ومراجعة النتائج.
+      </p>
+      <div class="tags">
+        <span class="tag">هندسة إنشائية</span>
+        <span class="tag">شروحات عملية</span>
+        <span class="tag">تطوير برامج</span>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section>
-      <h2>كيف تبدأ؟</h2>
-      <ol>
-        <li>حمّل نسخة المنصة المناسبة لجهازك.</li>
-        <li>ثبّت المنصة وافتحها.</li>
-        <li>تواصل معنا لاختيار البرامج والحصول على التفعيل.</li>
-      </ol>
-    </section>
-  </main>
+<section id="education" class="content">
+  <div class="container">
+    <div class="section-head">
+      <span>المحتوى التعليمي</span>
+      <h2>نفهم، نطبّق، وراجعوا النتائج.</h2>
+      <p>الموضوعات التي أشاركها عبر محتواي الهندسي.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="number">01 / ENGINEERING</div>
+        <h3>مفاهيم التصميم الإنشائي</h3>
+        <p>تفسير سلوك العناصر الإنشائية وفحوص التصميم بأمثلة عملية.</p>
+      </article>
+      <article class="card">
+        <div class="number">02 / SOFTWARE</div>
+        <h3>تطبيقات وبرامج هندسية</h3>
+        <p>شرح إدخال البيانات، قراءة النتائج وإعداد تقارير الحسابات.</p>
+      </article>
+      <article class="card">
+        <div class="number">03 / SITE</div>
+        <h3>تفاصيل ومواقف تنفيذية</h3>
+        <p>ربط التصميم بالتنفيذ وتبسيط المصطلحات المستخدمة في الموقع.</p>
+      </article>
+    </div>
+    <div class="actions">
+      <a id="facebook" class="btn outline" hidden>
+        تابع المحتوى على فيسبوك ↗
+      </a>
+    </div>
+  </div>
+</section>
 
-  <footer>منصة سراج | <span id="year"></span></footer>
+<section id="platform" class="content">
+  <div class="container">
+    <div class="platform">
+      <div>
+        <div class="section-head">
+          <span>تطبيقات أطورها</span>
+          <h2>منصة سراج</h2>
+        </div>
+        <p>
+          منصة تضم برامج للتصميم الإنشائي، مع نتائج الحسابات
+          والتسليح وتقارير قابلة للطباعة.
+        </p>
+        <div class="actions">
+          <a id="download" class="btn" hidden>تحميل المنصة ↓</a>
+          <a class="btn outline whatsapp">استفسر عن التفعيل ↗</a>
+        </div>
+        <p class="note">
+          تنزيل المنصة وتثبيتها مجاني. استخدام البرامج يتطلب التفعيل.
+        </p>
+      </div>
+      <ul class="platform-list">
+        <li>تصميم القواعد المنفصلة</li>
+        <li>تصميم القواعد المشتركة</li>
+        <li>تصميم الأعمدة القصيرة</li>
+        <li>تصميم قواعد الجار بشداد</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <script>
-    // ===== عدّل بيانات الموقع من هنا =====
-    const settings = {
-      // ضع رابط ملف التثبيت بين علامتي الاقتباس
-      downloadUrl: "",
-      whatsapp: "218925000529",
-      message: "السلام عليكم، أريد الاستفسار عن تفعيل برامج منصة سراج."
-    };
+<section id="contact" class="content">
+  <div class="container contact">
+    <div class="section-head">
+      <span>تواصل معي</span>
+      <h2>عندك استفسار؟</h2>
+      <p>للاستفسار عن المحتوى الهندسي وبرامج منصة سراج.</p>
+    </div>
+    <a class="btn whatsapp">تواصل عبر واتساب ↗</a>
+  </div>
+</section>
+</main>
 
-    const download = document.getElementById("download");
+<footer>
+  <div class="container footer-row">
+    <span>© <span id="year"></span> م. سراج المدني</span>
+    <span dir="ltr">Civil Engineer · Structural Engineering Educator</span>
+  </div>
+</footer>
 
-    if (settings.downloadUrl.startsWith("https://")) {
-      download.href = settings.downloadUrl;
-      download.textContent = "تحميل منصة سراج";
-      download.removeAttribute("aria-disabled");
-    }
+<script>
+/* ==================================================
+   عدّل الروابط هنا فقط:
+   ضع كل رابط بين علامتي الاقتباس.
+   الرابط الفارغ يجعل الزر مخفيًا حتى تضيف الرابط.
+   ================================================== */
+const links = {
+  facebook: "",
+  download: "",
+  whatsapp: "218925000529"
+};
 
-    document.getElementById("contact").href =
-      "https://wa.me/" + settings.whatsapp +
-      "?text=" + encodeURIComponent(settings.message);
+function showLink(id, url) {
+  if (!url.startsWith("https://")) return;
+  const element = document.getElementById(id);
+  element.href = url;
+  element.hidden = false;
+}
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+showLink("facebook", links.facebook);
+showLink("download", links.download);
+
+const message = encodeURIComponent(
+  "السلام عليكم م. سراج، أريد الاستفسار عن برامج منصة سراج."
+);
+
+document.querySelectorAll(".whatsapp").forEach(element => {
+  element.href = "https://wa.me/" + links.whatsapp + "?text=" + message;
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
